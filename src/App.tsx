@@ -6,6 +6,7 @@ import {KanaCard} from '../components/KanaCard.tsx'
 
 function App() {
 
+
   return (
     <div>
       <Nav text={'hello'}/>
