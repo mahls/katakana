@@ -1,7 +1,7 @@
 import React from 'react'
-import {Button} from './Button.tsx'
+import {AnswerButton} from './AnswerButton.tsx'
 
-export const Buttons: React.FC = () => {
+export const AnswerButtons: React.FC = () => {
 
   let buttonLetters: Array<{id: number, letter: string}> = [
     {id: Math.random(), letter: 'a'},
@@ -18,7 +18,7 @@ export const Buttons: React.FC = () => {
       <div className={btnDivStyle}>
       {buttonLetters.map((value)=>{
         return (
-          <Button key={value.id} id={value.id} letter={value.letter} />
+          <AnswerButton key={value.id} id={value.id} letter={value.letter} />
         )
       })}
       </div>
@@ -27,5 +27,6 @@ export const Buttons: React.FC = () => {
 
 }
 
-//Math.floor(Math.random() * 10); 
+//Math.floor(Math.random() * 10);
+//Randomly select three letters and have one letter match the kana displaye 
   

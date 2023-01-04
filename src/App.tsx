@@ -2,11 +2,17 @@ import { useState } from 'react'
 import './App.css'
 import {Nav} from '../components/Nav.tsx'
 import {KanaCard} from '../components/KanaCard.tsx'
-//https://www.nhk.or.jp/lesson/en/letters/katakana.html
+
+
+// https://www.nhk.or.jp/lesson/en/letters/katakana.html
+// change Button to AnswerButton
+// change Buttons to AnswerButtons
+
+
 
 function App() {
  
-  let appStyle="h-screen bg-gradient-to-r from-blue-900 to-indigo-600";
+  let appStyle="h-screen bg-gradient-to-r from-stone-900 to-blue-900";
 
   return (
     <div className={appStyle}>
