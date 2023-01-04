@@ -19,27 +19,32 @@ export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
   
   let checkForMatch=()=>{console.log("test")};
   
-  let kanaImgDivStyle="border-2 border-stone-900 rounded flex justify-center items-center p-2 pt-10 pb-10 pl-4 mb-4";
-  let kanaContainerDiv="bg-stone-800 p-8 rounded shadow-2xl";
-  let testStyle="w-72 h-72 bg-white bg-opacity-20 backdrop-blur-sm rounded drop-shadow-lg p-5";
-  let kanaImgStyle="rounded";
+  let kanaImgDivStyle="border-b border-t border-stone-900 rounded flex justify-center items-center p-2 pt-20 pb-20 pl-4";
+  let kanaContainerDiv="bg-stone-800 rounded w-96 shadow-2xl";
+  let kanaImgStyle="rounded invert";
 
   return (
 
-    <div className="flex flex-col mt-40 items-center">
+    <div className="flex flex-col mt-28 items-center align-center">
       
       <div className={kanaContainerDiv}>
 
-        <div className="flex">
-          <UtilButtons/>
-          <TimerDisplay/>
+        <div className="flex align-center items-center bg-purple-500">
+          <div>
+            <UtilButtons/>
+          </div>
+          <div>
+            <TimerDisplay/>
+          </div>
         </div>
 
         <div className={kanaImgDivStyle}>
           <img src={aKana} className={kanaImgStyle}/>
         </div>
-
-        <div><AnswerButtons/></div>
+        
+        <div className="bg-red-500">
+          <AnswerButtons/>
+        </div>
 
       </div>
 

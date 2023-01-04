@@ -7,11 +7,15 @@ export const DataSection = () => {
   // high score
   // accuracy %
   // ratio right to wrong
+  // total play time
 
 
   return (
-    <div>
-      
+    <div> 
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
     </div>
   )
 }

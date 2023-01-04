@@ -7,9 +7,16 @@ import {AiOutlinePlayCircle} from 'react-icons/ai'
 export const UtilButtons = () => {
   
 
-  let UtilDivStlye="flex align-center items-center";
-  let buttonStyle="mr-1 p4 mb-3 w-7 h-7 text-xl justify-right bg-stone-900 border border-stone-700 rounded align-center items-center flex justify-center text-white p2 hover:bg-stone-800 transition ease-in-out delay-50 ";
+  let UtilDivStlye="flex align-center items-center bg-red-400";
+  
+  let buttonStyle=" mr-1 p4 mb-3 w-12 h-12 text-xl bg-stone-900 border border-stone-700 rounded align-center items-center flex justify-center text-white p2 hover:bg-stone-800 transition ease-in-out delay-50 ";
+  
+  let playBtnStyle=buttonStyle+"text-green-600";
+  let pauseBtnStyle=buttonStyle+"text-yellow-300";
+  let restartBtnStyle=buttonStyle+"text-blue-500";
   let btnContent="p3";
+
+  let iconSize="scale-125"
 
   let PauseButton =()=>{}
   let RestartButton =()=>{}
@@ -18,16 +25,16 @@ export const UtilButtons = () => {
   return (
     <div className={UtilDivStlye}>
         
-        <div className={buttonStyle}>
-          <button className={btnContent}><MdRestartAlt/></button>
+        <div className={playBtnStyle}>
+          <button className={btnContent}><AiOutlinePlayCircle className={iconSize}/></button>
         </div>
         
-        <div className={buttonStyle}>
-          <button><AiOutlinePauseCircle/></button>
+        <div className={pauseBtnStyle}>
+          <button><AiOutlinePauseCircle className={iconSize}/></button>
         </div>
         
-        <div className={buttonStyle}>
-          <button><AiOutlinePlayCircle/></button>
+        <div className={restartBtnStyle}>
+          <button><MdRestartAlt className={iconSize}/></button>
         </div>
 
     </div>

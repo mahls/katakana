@@ -6,7 +6,7 @@ interface Props {
   
 }
 
-let btnStyle="border border-stone-800 cursor-pointer w-10 rounded font-bold m-1 flex items-center justify-center text-stone-100 bg-stone-900 hover:bg-stone-800 transition ease-in-out delay-50 ";
+let btnStyle="border border-stone-800 cursor-pointer w-16 h-16 rounded font-bold m-1 items-center align-center text-stone-100 bg-stone-900 hover:bg-stone-800 transition ease-in-out delay-10 ";
 
 
 export const AnswerButton: React.FC<Props> = ({id, letter}) => {
