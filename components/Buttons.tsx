@@ -11,9 +11,11 @@ export const Buttons: React.FC = () => {
     {id: Math.random(), letter: 'u'}, 
   ];
 
+  let btnDivStyle="flex align-center bg-stone-900 p-1 w-max rounded";
+
   return (
     <div>
-      <div>
+      <div className={btnDivStyle}>
       {buttonLetters.map((value)=>{
         return (
           <Button key={value.id} id={value.id} letter={value.letter} />

@@ -6,12 +6,13 @@ interface Props {
   
 }
 
+let btnStyle="border border-stone-800 cursor-pointer w-10 rounded font-bold m-1 flex items-center justify-center text-stone-600 bg-stone-900 hover:bg-stone-800 transition ease-in-out delay-50 ";
+
+
 export const Button: React.FC<Props> = ({id, letter}) => {
   return (
     <div>
-      {id}
-      {letter}
-      <input type="button" value="A" className="border-2 border-red-500 cursor-pointer"/>
+        <input type="button" value={letter} className={btnStyle}/>
     </div>
   )
 }

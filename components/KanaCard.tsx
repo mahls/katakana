@@ -18,17 +18,25 @@ export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
   const [userKanaValue, setUserKanaValue] = useState<string>("");
   
   let checkForMatch=()=>{console.log("test")};
+  
+  let kanaImgDivStyle="border-2 border-stone-900 rounded flex justify-center items-center p-2 pt-10 pb-10 pl-4 mb-4";
+  let kanaContainerDiv="bg-stone-800 p-5 rounded shadow-2xl";
+  let kanaImgStyle="rounded";
 
   return (
 
-    <div className="flex flex-col">
+    <div className="flex flex-col mt-20 items-center">
       
-      <div>
-        {randomKana}
+      <div className={kanaContainerDiv}>
 
-        <img src={aKana}/>
-  
-        <Buttons/>
+        <div className={kanaImgDivStyle}>
+          <img src={aKana} className={kanaImgStyle}/>
+        </div>
+
+        <div>
+          <Buttons/>
+        </div>
+
       </div>
 
     </div>

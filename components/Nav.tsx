@@ -17,7 +17,7 @@ export const Nav: React.FC<Props> = ({text}) => {
 
 
   return (
-    <div className=" pl-2 pr-2 flex justify-between text-white border-b border-stone-500 bg-stone-900 h-10 items-center">
+    <div className=" pl-2 pr-2 flex justify-between text-black shadow-xl bg-stone-900 h-8 items-center text-stone-700">
       
       <div>
         <p>React Learn Katakana</p>
