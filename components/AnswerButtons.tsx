@@ -5,10 +5,10 @@ export const AnswerButtons: React.FC = () => {
 
   let buttonLetters: Array<{id: number, letter: string}> = [
     {id: Math.random(), letter: 'A'},
-    {id: Math.random(), letter: 'E'},
     {id: Math.random(), letter: 'I'},
-    {id: Math.random(), letter: 'O'},
-    {id: Math.random(), letter: 'U'}, 
+    {id: Math.random(), letter: 'U'},
+    {id: Math.random(), letter: 'E'},
+    {id: Math.random(), letter: 'O'}, 
   ];
 
   let btnDivStyle=" bg-red-900 rounded-b";

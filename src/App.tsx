@@ -5,14 +5,13 @@ import {KanaCard} from '../components/KanaCard.tsx'
 
 
 // https://www.nhk.or.jp/lesson/en/letters/katakana.html
-// change Button to AnswerButton
-// change Buttons to AnswerButtons
 
 
 
 function App() {
  
-  let appStyle="h-screen bg-gradient-to-r from-stone-900 to-blue-900";
+  let appStyle="h-screen bg-gradient-to-r from-blue-600 to-blue-900";
+
 
   return (
     <div className={appStyle}>

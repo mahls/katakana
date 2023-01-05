@@ -2,6 +2,8 @@ import {React, useState, useEffect} from 'react'
 import {AnswerButtons} from './AnswerButtons.tsx'
 import {UtilButtons} from '../components/UtilButtons.tsx'
 import {TimerDisplay} from '../components/TimerDisplay.tsx'
+import {ProgressBar} from '../components/ProgressBar.tsx'
+import {ScoreDisplay} from '../components/ScoreDisplay.tsx'
 import aKana from '../public/kanaLetters/aKana.png'
 import eKana from '../public/kanaLetters/eKana.png'
 import iKana from '../public/kanaLetters/iKana.png'
@@ -29,22 +31,32 @@ export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
       
       <div className={kanaContainerDiv}>
 
-        <div className="flex align-center items-center bg-purple-500">
+        
+        <div className="flex align-center items-center justify-between m-1 ">
           <div>
             <UtilButtons/>
           </div>
           <div>
             <TimerDisplay/>
           </div>
-        </div>
+          <div className="mr-2 pr-2">
+            <ScoreDisplay/>
+          </div>
+        </div> 
+
+        <ProgressBar progressPercentage={95}/> 
+
 
         <div className={kanaImgDivStyle}>
           <img src={aKana} className={kanaImgStyle}/>
         </div>
         
-        <div className="bg-red-500">
+
+        <div className=" border-b border-stone-900 rounded">
           <AnswerButtons/>
         </div>
+
+      
 
       </div>
 
