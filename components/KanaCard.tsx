@@ -10,19 +10,15 @@ import iKana from '../public/kanaLetters/iKana.png'
 import oKana from '../public/kanaLetters/oKana.png'
 import uKana from '../public/kanaLetters/uKana.png'
 
-interface Props{kanaLetter: string;};
+interface Props{
+  kanaLetter: string;
+};
 
-export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
-
-  const [randomKana, setrandomKana] = useState<string>(kanaLetter);
-  const [userKanaValue, setUserKanaValue] = useState<string>("");
-
-  let kanaImages: string = ['aKana', 'eKana', 'iKana', 'oKana', 'uKana'];
+export const KanaCard: React.FC<Props> = ({kanaLetter, time, setTime}) => {
   
-  let checkForMatch=()=>{console.log("test")};
-  
-  let kanaImgDivStyle="border-b border-t border-stone-900 rounded flex justify-center items-center p-2 pt-20 pb-20 pl-4";
-  let kanaContainerDiv="bg-stone-800 rounded w-96 shadow-2xl";
+  //styles
+  let kanaImgDivStyle="border-b border-t border-stone-900 rounded flex justify-center items-center p-2 pt-20 pb-20 pl-4 h-80";
+  let kanaContainerDiv="bg-stone-800 rounded w-96 shadow-2xl ";
   let kanaImgStyle="rounded invert";
 
   return (
@@ -30,14 +26,13 @@ export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
     <div className="flex flex-col mt-28 items-center align-center">
       
       <div className={kanaContainerDiv}>
-
         
         <div className="flex align-center items-center justify-between m-1 ">
           <div>
             <UtilButtons/>
           </div>
           <div>
-            <TimerDisplay/>
+            <TimerDisplay time={time} setTime={setTime}/>
           </div>
           <div className="mr-2 pr-2">
             <ScoreDisplay/>
@@ -46,20 +41,16 @@ export const KanaCard: React.FC<Props> = ({kanaLetter}) => {
 
         <ProgressBar progressPercentage={95}/> 
 
-
         <div className={kanaImgDivStyle}>
-          <img src={aKana} className={kanaImgStyle}/>
+          <img src={kanaLetter} className={kanaImgStyle}/>
         </div>
-        
 
         <div className=" border-b border-stone-900 rounded">
           <AnswerButtons/>
         </div>
-
-      
-
+        
       </div>
-
+      
     </div>
 
   )

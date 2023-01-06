@@ -2,6 +2,8 @@ import React from 'react'
 import {AnswerButton} from './AnswerButton.tsx'
 
 export const AnswerButtons: React.FC = () => {
+  
+  
 
   let buttonLetters: Array<{id: number, letter: string}> = [
     {id: Math.random(), letter: 'A'},
@@ -10,6 +12,10 @@ export const AnswerButtons: React.FC = () => {
     {id: Math.random(), letter: 'E'},
     {id: Math.random(), letter: 'O'}, 
   ];
+
+  let makeFourLetter=()=>{
+    //
+  };
 
   let btnDivStyle=" bg-red-900 rounded-b";
 
